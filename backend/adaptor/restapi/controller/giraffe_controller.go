@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"encoding/json"
 	"net/http"
 
 	"github.com/labstack/echo/v4"
@@ -27,7 +28,14 @@ func (gc *GiraffeControllerImpl) GetRandom(c echo.Context) error {
 		return xerrors.Errorf("failed to get random giraffe: %w", err)
 	}
 
-	res := presenter.GiraffeImageResponse(giraffe)
+	response := presenter.GiraffeImageResponse(giraffe)
 
-	return c.JSON(http.StatusOK, res)
+	// presigned urlの`&`がエンコードされないよう、カスタムエンコーダを実装する
+	encoder := json.NewEncoder(c.Response().Writer)
+	encoder.SetEscapeHTML(false)
+
+	c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSONCharsetUTF8)
+	c.Response().WriteHeader(http.StatusOK)
+
+	return encoder.Encode(response)
 }

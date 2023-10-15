@@ -1,6 +1,6 @@
 module github.com/satokiy/giraffe
 
-go 1.21.0
+go 1.21
 
 require (
 	github.com/cosmtrek/air v1.45.0

@@ -1,14 +1,13 @@
-GO				    ?= go
 GOIMPORTS		  ?= goimports
 GOLANGCI_LINT	?= golangci-lint
-AIR           ?= ${GO} run github.com/cosmtrek/air
+AIR           ?= go run github.com/cosmtrek/air
 
 ## $make build
 .PHONY: build
 build: giraffe
 
 giraffe: $(shell find . -name '*.go')
-		${GO} build -o ./cmd/main main.go
+		go build -o ./cmd/main main.go
 
 ## $make run
 .PHONY: run
@@ -16,7 +15,6 @@ run:
 	${AIR} -c .air.toml
 
 ## $ make fmt
-# ソースコードの自動整形をする
 .PHONY: fmt
 fmt:
 	${GOIMPORTS} -format-only -w .

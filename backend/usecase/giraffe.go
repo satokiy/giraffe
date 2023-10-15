@@ -1,8 +1,11 @@
 package usecase
 
 import (
+	"math/rand"
+
 	"github.com/satokiy/giraffe/adaptor/repository"
 	"github.com/satokiy/giraffe/model"
+	"golang.org/x/xerrors"
 )
 
 type GiraffeUsecase interface {
@@ -22,11 +25,15 @@ func NewGiraffeUsecaseImpl(r repository.GiraffeRepository) GiraffeUsecase {
 func (u *GiraffeUsecaseImpl) GerImageRandom() (*model.GiraffeImage, error) {
 	imageList, err := u.giraffeRepository.GetGiraffeImageList()
 	if err != nil {
-		return nil, err
+		return nil, xerrors.Errorf("failed to get image list: %w", err)
 	}
 
-	// TODO
-	image := imageList[0]
+	// imageListからランダムに1つ取得
+	imageKey := imageList[rand.Intn(len(imageList))]
+	url, err := u.giraffeRepository.GetGiraffeImagePresignedURL(imageKey)
+	if err != nil {
+		return nil, xerrors.Errorf("failed to get presigned url: %w", err)
+	}
 
-	return &model.GiraffeImage{URL: image}, nil
+	return &model.GiraffeImage{URL: url}, nil
 }

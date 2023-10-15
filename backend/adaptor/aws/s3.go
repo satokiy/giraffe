@@ -1,6 +1,9 @@
 package aws
 
 import (
+	"fmt"
+	"time"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
@@ -21,7 +24,10 @@ func NewS3Config(bucket, region string) S3Config {
 }
 
 type S3Client interface {
+	// 画像URLのリスト
 	GetImageURLList() ([]string, error)
+	// 署名付きURL
+	GetPresignedURL(key string) (string, error)
 }
 
 type S3ClientImpl struct {
@@ -35,9 +41,6 @@ func NewS3Client(cfg S3Config) S3Client {
 }
 
 func (s3c *S3ClientImpl) GetImageURLList() ([]string, error) {
-
-	return []string{"aaaa", "bbbb", "cccc"}, nil
-
 	session := session.Must(session.NewSession(&aws.Config{
 		Region: aws.String(s3c.config.Region),
 	}))
@@ -56,4 +59,22 @@ func (s3c *S3ClientImpl) GetImageURLList() ([]string, error) {
 	})
 
 	return objectList, nil
+}
+
+func (s3c *S3ClientImpl) GetPresignedURL(key string) (string, error) {
+	fmt.Println(s3c.config.Region)
+	session := session.Must(session.NewSession(&aws.Config{
+		Region: aws.String(s3c.config.Region),
+	}))
+	svc := s3.New(session)
+
+	req, _ := svc.GetObjectRequest(&s3.GetObjectInput{
+		Bucket: aws.String(s3c.config.Bucket),
+		Key:    aws.String(key),
+	})
+	url, err := req.Presign(15 * time.Minute)
+	if err != nil {
+		return "", xerrors.Errorf("failed to presigned url: %w", err)
+	}
+	return url, nil
 }
