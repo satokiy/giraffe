@@ -1,3 +1,4 @@
+ENV				?= dev
 GOIMPORTS		  ?= goimports
 GOLANGCI_LINT	?= golangci-lint
 AIR           ?= go run github.com/cosmtrek/air
@@ -12,7 +13,7 @@ giraffe: $(shell find . -name '*.go')
 ## $make run
 .PHONY: run
 run:
-	${AIR} -c .air.toml
+	GO_ENV=${ENV} ${AIR} -c .air.toml
 
 ## $ make fmt
 .PHONY: fmt
