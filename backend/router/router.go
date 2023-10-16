@@ -13,9 +13,11 @@ func bodyDumpHandler(c echo.Context, reqBody, resBody []byte) {
 	fmt.Printf("Response Body: %v\n", string(resBody))
 }
 
-func NewRouter(gc controller.GiraffeController) *echo.Echo {
+func NewRouter(gc controller.GiraffeController, hc controller.HealthCheckController) *echo.Echo {
 	e := echo.New()
 	e.Use(middleware.BodyDump(bodyDumpHandler))
+
+	e.GET("/health", hc.GetHealthCheck)
 
 	giraffe := e.Group("/giraffe")
 	giraffe.GET("/random", gc.GetRandom)

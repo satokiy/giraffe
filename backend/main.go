@@ -29,6 +29,7 @@ func main() {
 	giraffeRepository := repository.NewGiraffeRepositoryImpl(s3Client)
 	giraffeUsecase := usecase.NewGiraffeUsecaseImpl(giraffeRepository)
 	giraffeController := controller.NewGiraffeControllerImpl(giraffeUsecase)
-	e := router.NewRouter(giraffeController)
+	healthCheckController := controller.NewHealthCheckControllerImpl()
+	e := router.NewRouter(giraffeController, healthCheckController)
 	e.Logger.Fatal(e.Start(fmt.Sprintf(":%s", os.Getenv("PORT"))))
 }
