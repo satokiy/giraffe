@@ -3,7 +3,7 @@ module github.com/satokiy/giraffe
 go 1.21
 
 require (
-	github.com/cosmtrek/air v1.45.0
+	github.com/cosmtrek/air v1.49.0
 	github.com/labstack/echo/v4 v4.11.2
 	golang.org/x/tools v0.6.0
 )
