@@ -46,6 +46,8 @@ github.com/aws/aws-sdk-go v1.46.1 h1:U26quvBWFZMQuultLw5tloW4GnmWaChEwMZNq8uYatw
 github.com/aws/aws-sdk-go v1.46.1/go.mod h1:aVsgQcEevwlmQ7qHE9I3h+dtQgpqhFB+i8Phjh7fkwI=
 github.com/aws/aws-sdk-go v1.46.4 h1:48tKgtm9VMPkb6y7HuYlsfhQmoIRAsTEXTsWLVlty4M=
 github.com/aws/aws-sdk-go v1.46.4/go.mod h1:aVsgQcEevwlmQ7qHE9I3h+dtQgpqhFB+i8Phjh7fkwI=
+github.com/aws/aws-sdk-go v1.46.5 h1:NYYUrhOftwiXPkqZwEpB3043bMukegJAt15ozrqJbEY=
+github.com/aws/aws-sdk-go v1.46.5/go.mod h1:aVsgQcEevwlmQ7qHE9I3h+dtQgpqhFB+i8Phjh7fkwI=
 github.com/bep/godartsass v0.16.0 h1:nTpenrZBQjVSjLkCw3AgnYmBB2czauTJa4BLLv448qg=
 github.com/bep/godartsass v0.16.0/go.mod h1:6LvK9RftsXMxGfsA0LDV12AGc4Jylnu6NgHL+Q5/pE8=
 github.com/bep/golibsass v1.1.0 h1:pjtXr00IJZZaOdfryNa9wARTB3Q0BmxC3/V1KNcgyTw=
