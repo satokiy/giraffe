@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/cosmtrek/air v1.49.0
 	github.com/labstack/echo/v4 v4.11.3
-	golang.org/x/tools v0.16.0
+	golang.org/x/tools v0.16.1
 )
 
 require (
