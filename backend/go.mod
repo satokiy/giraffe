@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/cosmtrek/air v1.49.0
 	github.com/labstack/echo/v4 v4.11.4
-	golang.org/x/tools v0.16.1
+	golang.org/x/tools v0.17.0
 )
 
 require (
@@ -38,9 +38,9 @@ require (
 	github.com/samber/lo v1.39.0
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
-	golang.org/x/crypto v0.17.0 // indirect
-	golang.org/x/net v0.19.0 // indirect
-	golang.org/x/sys v0.15.0 // indirect
+	golang.org/x/crypto v0.18.0 // indirect
+	golang.org/x/net v0.20.0 // indirect
+	golang.org/x/sys v0.16.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/xerrors v0.0.0-20231012003039-104605ab7028
 )
