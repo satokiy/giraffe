@@ -6,7 +6,7 @@ toolchain go1.23.4
 
 require (
 	github.com/cosmtrek/air v1.52.1
-	github.com/labstack/echo/v4 v4.12.0
+	github.com/labstack/echo/v4 v4.13.0
 	golang.org/x/tools v0.27.0
 )
 
