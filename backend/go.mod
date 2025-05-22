@@ -6,7 +6,7 @@ toolchain go1.24.3
 
 require (
 	github.com/cosmtrek/air v1.52.1
-	github.com/labstack/echo/v4 v4.13.3
+	github.com/labstack/echo/v4 v4.13.4
 	golang.org/x/tools v0.33.0
 )
 
@@ -32,7 +32,7 @@ require (
 	golang.org/x/exp v0.0.0-20221031165847-c99f073a8326 // indirect
 	golang.org/x/mod v0.24.0 // indirect
 	golang.org/x/sync v0.14.0 // indirect
-	golang.org/x/time v0.8.0 // indirect
+	golang.org/x/time v0.11.0 // indirect
 	google.golang.org/protobuf v1.31.0 // indirect
 )
 
@@ -40,7 +40,7 @@ require (
 	github.com/aws/aws-sdk-go v1.55.7
 	github.com/joho/godotenv v1.5.1
 	github.com/labstack/gommon v0.4.2 // indirect
-	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-colorable v0.1.14 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/samber/lo v1.50.0
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
