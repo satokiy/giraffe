@@ -6,7 +6,7 @@ toolchain go1.25.5
 
 require (
 	github.com/cosmtrek/air v1.52.1
-	github.com/labstack/echo/v4 v4.13.4
+	github.com/labstack/echo/v4 v4.14.0
 	golang.org/x/tools v0.40.0
 )
 
@@ -33,7 +33,7 @@ require (
 	golang.org/x/mod v0.31.0 // indirect
 	golang.org/x/sync v0.19.0 // indirect
 	golang.org/x/telemetry v0.0.0-20251203150158-8fff8a5912fc // indirect
-	golang.org/x/time v0.11.0 // indirect
+	golang.org/x/time v0.14.0 // indirect
 	google.golang.org/protobuf v1.31.0 // indirect
 )
 
