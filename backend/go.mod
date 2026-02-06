@@ -1,12 +1,13 @@
 module github.com/satokiy/giraffe
 
-go 1.24.0
+go 1.25.0
 
 toolchain go1.25.7
 
 require (
 	github.com/cosmtrek/air v1.52.1
 	github.com/labstack/echo/v4 v4.15.0
+	github.com/labstack/echo/v5 v5.0.3
 	golang.org/x/tools v0.41.0
 )
 
