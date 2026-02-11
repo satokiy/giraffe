@@ -2,7 +2,7 @@ module github.com/satokiy/giraffe
 
 go 1.24.0
 
-toolchain go1.25.7
+toolchain go1.26.0
 
 require (
 	github.com/cosmtrek/air v1.52.1
