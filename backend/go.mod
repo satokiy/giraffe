@@ -7,7 +7,7 @@ toolchain go1.27.2
 require (
 	github.com/cosmtrek/air v1.52.1
 	github.com/labstack/echo/v4 v4.16.0
-	golang.org/x/tools v0.51.0
+	golang.org/x/tools v0.52.0
 )
 
 require (
@@ -30,9 +30,9 @@ require (
 	github.com/spf13/cast v1.6.0 // indirect
 	github.com/tdewolff/parse/v2 v2.7.12 // indirect
 	golang.org/x/exp v0.0.0-20221031165847-c99f073a8326 // indirect
-	golang.org/x/mod v0.41.0 // indirect
-	golang.org/x/sync v0.23.0 // indirect
-	golang.org/x/telemetry v0.0.0-20260924152758-ed294f943157 // indirect
+	golang.org/x/mod v0.42.0 // indirect
+	golang.org/x/sync v0.24.0 // indirect
+	golang.org/x/telemetry v0.0.0-20261009151841-97e8ea77aa2a // indirect
 	golang.org/x/time v0.15.0 // indirect
 	google.golang.org/protobuf v1.31.0 // indirect
 )
@@ -46,9 +46,9 @@ require (
 	github.com/samber/lo v1.53.0
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
-	golang.org/x/crypto v0.57.0 // indirect
-	golang.org/x/net v0.59.0 // indirect
-	golang.org/x/sys v0.48.0 // indirect
-	golang.org/x/text v0.42.0 // indirect
+	golang.org/x/crypto v0.58.0 // indirect
+	golang.org/x/net v0.61.0 // indirect
+	golang.org/x/sys v0.49.0 // indirect
+	golang.org/x/text v0.43.0 // indirect
 	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da
 )
