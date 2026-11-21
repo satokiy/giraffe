@@ -610,6 +610,7 @@ github.com/labstack/echo/v4 v4.16.5 h1:RtdOgRS+2g6ytaEFo58p4v6ZX6aFNJyiQie1O/mlW
 github.com/labstack/echo/v4 v4.16.5/go.mod h1:V/EQaTVHYJH92QhbQe7kFQ4mjgcjxLQQUQtAN87zZdw=
 github.com/labstack/echo/v4 v4.16.6 h1:uEk8Rx5OXXykG3PPaR7UaxZKey+3LFrjoX7acUQFmCw=
 github.com/labstack/echo/v4 v4.16.6/go.mod h1:V/EQaTVHYJH92QhbQe7kFQ4mjgcjxLQQUQtAN87zZdw=
+github.com/labstack/echo/v5 v5.4.7/go.mod h1:4iEGNQiPPZnkfYpNR/L6fINd3NLiGWUD5+eBotFALas=
 github.com/labstack/gommon v0.4.0 h1:y7cvthEAEbU0yHOf4axH8ZG2NH8knB9iNSoTO8dyIk8=
 github.com/labstack/gommon v0.4.0/go.mod h1:uW6kP17uPlLJsD3ijUYn3/M5bAxtlZhMI6m3MFxTMTM=
 github.com/labstack/gommon v0.4.2 h1:F8qTUNXgG1+6WQmqoUWnz8WiEU60mXVVw0P4ht1WRA0=
